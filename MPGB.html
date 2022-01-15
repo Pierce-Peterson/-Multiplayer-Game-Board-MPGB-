@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<!--
+This is the HTML 
+-->
+<html lang=en>
+
+<head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>MPGB</title>
+    <!-- insert the CSS file here-->
+    <link rel="stylesheet" href="style.css">
+    <!-- insert the logic code file here-->
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+    <script src="MPGBDB.js"></script>
+    <script src="MPGB.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $(".notification .material-icons").click(function() {
+                $(".dropdown").toggleClass("active");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <!-- the header will post the name of the game that it gets from the database-->
+        <h1 id="game">MPGB</h1>
+    </header>
+    <main>
+        <div id="wrapper">
+            <div>
+                <button type="button" class="button-search" id="search">Find Games</button>
+                <button type="button" class="button-search" id="squads">Find Squad</button>
+                <a href="Groups.html"><button type="button" class="button-search">Create Squad</button></a>
+            </div>
+
+            <div class="info">
+
+                <div class="container">
+                    <div class="notification">
+                        <i class="material-icons" id="notificationIcon">notifications</i>
+                        <span id="count" class="notifs hidden"></span>
+                        <div class="dropdown" id="notificationDropdownList">
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="button-info" id="mySquads">My Squads</button>
+                <button type="button" class="button-info" id="logOut">Log out</button>
+            </div>
+
+            <div>
+                <input style="margin-left: 40%;" type="text" id="gameSearch" name="searchbar" placeholder="Search...">
+                <div class="game-list hidden" id="game-list">
+                    <!-- holds the list of games-->
+                    <div class="game-content" id="games"></div>
+                    <!-- looks at the previous 20 or so games -->
+                    <button class="scrollbutton" id="prev">prev</button>
+                    <p class="page" id="page">1</p>
+                    <!-- looks at the next 20 or so games -->
+                    <button class="scrollbutton" id="next">next</button>
+                </div>
+                <!-- <input type="text" id="chatbox" name="chatbox" placeholder="Type message here"> -->
+                <!-- outline of actual message board-->
+                <div class="message-board hidden" id="chatbox">
+                    <p class="message-title" style="padding: 20px; font-size: 16pt; color: white;"><span>Chat Board</span></p>
+                    <!-- holds the content of the message board-->
+                    <div class="message-content" id="content"></div>
+                    <!-- input box for message-->
+                    <input type="text" id="chatMessage" placeholder="Start Chatting">
+                    <br><br>
+                    <!-- button to send message-->
+                    <button class="button-post" id="post">post</button>
+                </div>
+                <div class="users-list hidden" id="users-list">
+                    <!--holds list of users-->
+                    <div class="user-list" id="users"></div>
+                    <button class="scrollbutton hidden" id="prev">prev</button>
+                    <p class="page hidden" id="page">1</p>
+                    <button class="scrollbutton hidden" id="next">next</button>
+                    <br/><br/>
+                    <button class="groups-buttons" id="join">Join Group</button>
+                    <br/><br/>
+                    <button class="groups-buttons" id="leave">Leave Group</button>
+                    <br/><br/>
+                    <button class="groups-buttons" id="invite">Invite</button>
+                </div>
+            </div>
+        </div>
+
+
+    </main>
+</body>
+
+</html>

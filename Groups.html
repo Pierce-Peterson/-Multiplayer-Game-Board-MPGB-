@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+
+<html lang=en>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title>LFG</title>  
+    <link rel="stylesheet" href="GroupStyle.css">
+    <script src="Group.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+    <script src="MPGBDB.js"></script>
+</head>
+
+<body>
+	<header>
+		<h1 id="game"> MPGB </h1>
+	</header>
+	<main>
+        <div id="wrapper">
+            <div class="info">
+                <button type="button" class="button-info">About us</button>
+                <a href="MPGB.html"><button type="button" class="button-info">Home</button>
+                <a href="login.html"><button type="button" class="button-info">Log out</button></a>
+            </div>
+            <!-- Commented out for now.
+	            <div class="groups">
+	            	<!-groups div is for listing all groups available with the option to quickly join a group from the list. The start group button will reveal the create group div in the middle, otherwise hidden->
+	            	<p class="message-title"><span>Group Finder</span></p>
+	            	<button class="groups-buttons" id="squads">Start Group</button>
+	            	<!-holds list of all groups->
+	            	<div class="group-list" id="groups"></div>
+	            	<p id="group-page">List of all Groups Here</p>
+	            	<button class="groups-buttons" id="join">Join Group</button>
+	            </div>
+			-->
+            <div class="create-group">
+            	<!--create group div is for starting a new group with the options to add a name
+            		add a description and set it to public or private-->
+            	<p class=""><span>Group Name:</span></p>
+            	<input type="text" id="group-name" placeholder="Enter Group Name">
+            	<p class=""><span>Group Description:</span></p>
+            	<input type="text" id="group-description" placeholder="Enter Group Description">
+            	<br/><br/>
+            	<!--Possible public private option depending on DB capability-->
+            	Public: <input type="radio" name="privacy" value="Public">
+            	Private: <input id="radioPrivate" type="radio" name="privacy" value="Private">
+            	<br/><br/>
+            	<button class="groups-buttons" id="create">Create Group</button>
+            </div>
+            <!--
+	            <div class="my-groups">
+	            	<!-my groups div holds a list of groups that you are apart of with the options to invite a friend to one of your groups and to leave a group you are in->
+	            	<p class="list-titles"><span>My Groups</span></p>
+	            	<button class="groups-buttons" id="invite">Invite Friends</button>
+	            	<!-holds list of groups I'm in->
+	            	<div class="my-groups-list" id="my-groups">Groups I'm In Here</div>
+	                <a href="MPGB.html"><button class="groups-buttons" id="leave">Leave Group</button></a>
+	            </div>
+        	-->
+		</div>
+	</main>
+</body>
+</html>
+<!---->

@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+html {
+    margin: 0;
+    display: block;
+    height: 100%;
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 960px;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.notification {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    border-radius: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+}
+
+.notification .material-icons {
+    color: black;
+    line-height: 40px;
+    font-size: 2rem;
+    user-select: none;
+}
+
+.notification .notif-info {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.notification .notifs {
+    position: absolute;
+    top: 0;
+    right: -35%;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #FF4136;
+    color: #fff;
+    line-height: 25px;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+ul {
+    padding-inline-start: 30px;
+}
+
+.notification .material-icons {
+    cursor: pointer;
+}
+
+.notification .dropdown {
+    width: 350px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, .125);
+    position: absolute;
+    top: 50px;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.notification .dropdown .notif-info {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-radius: 1px solid #dbdbdb;
+}
+
+.notification .dropdown .notif-info:last-child {
+    border-bottom: 0px;
+}
+
+.notification .dropdown .notif-info p {
+    color: black;
+    margin-left: 5px;
+}
+
+.notification .dropdown .notif-info .notif-time {
+    color: #c5c5c5;
+    font-size: 12px;
+}
+
+.notification .dropdown::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 0;
+    transform: translateX(600%);
+    border: 15px solid;
+    border-color: transparent transparent #fff transparent;
+}
+
+.notification .dropdown.active {
+    display: block;
+}
+
+.notification .dropdown ul li {
+    list-style: none;
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+    padding: 8px 0;
+    display: flex;
+}
+
+.notification .dropdown ul li:last-child {
+    border-bottom: none;
+}
+
+.notification .dropdown ul li .notif-info {
+    position: relative;
+    cursor: pointer;
+}
+
+.notification .dropdown ul li .notif-info:hover {
+    font-weight: bold;
+    color: #cecece;
+}
+
+.button-search {
+    background-color: #FF4136;
+    border: transparent;
+    border-radius: 2em;
+    color: white;
+    cursor: pointer;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 0.6em 2.5em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.button-info {
+    background-color: transparent;
+    border-color: transparent;
+    color: white;
+    border-radius: 2em;
+    cursor: pointer;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 0.6em 2.5em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.button-post {
+    background-color: #FF4136;
+    border: transparent;
+    border-radius: 2em;
+    color: white;
+    cursor: pointer;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 20px;
+    padding: 0.6em 2.5em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+button:hover {
+    background: transparent;
+}
+
+button:active {
+    background: rgba(255, 0, 0, 0.062);
+    color: white;
+}
+
+#gameSearch {
+    position: relative;
+    right: 18%;
+    font-size: 30px;
+    padding: 0px 20px;
+    text-align: center;
+    width: 545px;
+}
+
+#game {
+    font-size: 100px;
+    color: white;
+    text-align: center;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.button-search {
+    position: relative;
+    display: inline-block;
+    left: 20%;
+}
+
+.info {
+    position: absolute;
+    display: inline-block;
+    top: 0%;
+    right: 5%;
+}
+
+.dropdown-items p {
+    text-transform: none;
+    font-size: medium;
+    color: black;
+    font-weight: 100;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#content {
+    color: white;
+    padding: 0px 20px;
+    font-size: 13pt;
+    outline: 2pt;
+    max-width: 85vw;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+#chatMessage {
+    padding: 0px 20px;
+    font-size: 13pt;
+}
+
+#chatbox {
+    background-image: url("chatbox.jpg");
+    position: absolute;
+    right: 30px;
+    bottom: 50px;
+    width: 350px;
+    max-width: 85vw;
+    max-height: 500px;
+    border-radius: 10px;
+}
+
+button {
+    outline: none;
+}
+
+.game-list {
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    font-size: 20px;
+    position: absolute;
+    padding: 10px 20px;
+    left: 42%;
+    top: 45%;
+}
+
+#games{
+    cursor: pointer;
+    display: inline;
+}
+
+.scrollbutton {
+    background-color: #FF4136;
+    border: transparent;
+    border-radius: 2em;
+    color: white;
+    cursor: pointer;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 10px;
+    padding: 0.6em 2.5em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+#page {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    padding: 5px 0px;
+}
+
+.hidden {
+    display: none;
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://i.imgur.com/k3dVjoY.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.login-page {
+    width: 360px;
+    padding: 10% 0 0;
+    margin: auto;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+}
+
+.form input {
+    font-family: "Roboto", sans-serif;
+    outline: 1;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+.form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #FF4136;
+    border: 0;
+    padding: 15px;
+    color: #ffffff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.form .register-form {
+    display: none;
+}
+
+.groups-buttons {
+    background-color: #FF4136;
+    border: transparent;
+    border-radius: 2em;
+    color: white;
+    cursor: pointer;
+    align-self: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0px;
+    padding: 0.5em 1.5em;
+    text-decoration: none;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.users-list {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    padding: 10px 20px;
+    left: 5%;
+    top: 40%;
+}

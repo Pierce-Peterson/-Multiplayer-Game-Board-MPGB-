@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title>Login and Registration Form</title>
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-firestore.js"></script>
+    <script src='https://code.jquery.com/jquery-3.5.1.min.js'></script>
+    <script src="MPGBDB.js"></script>
+    <script src="login.js"></script>
+	
+</head>
+
+<body>
+    <header>
+        <h1 id="game">MPGB</h1>
+    </header>
+    <div class="login-page">
+
+        <div class="form">
+            <form onsubmit="return false" class="register-form">
+                <b>Register</b>
+                <input type="text" id="usernameR" placeholder="Name" />
+                <input type="password" id="password1R" placeholder="Password" />
+                <input type="password" id="password2R" placeholder="Re-Enter Password" />
+                <button id="createAccount">Create</button>
+                <p class="message">Already Registered? <a href="#">Login</a>
+                </p>
+            </form>
+
+            <form onsubmit="return false" class="login-form">
+                <b>Login</b>
+                <input type="text" id="usernameL" placeholder="Username" />
+                <input type="password" id="passwordL" placeholder="Password" />
+                <button id="loginToAccount">Login</button>
+                <p class="message">Not Registered? <a href="#">Register</a>
+                </p>
+            </form>
+
+            
+            <script>
+                $('.message a').click(function() {
+                    $('form').animate({
+                        height: "toggle",
+                        opacity: "toggle"
+                    }, "slow");
+                });
+
+            </script>
+        </div>
+    </div>
+</body>
+
+</html>
